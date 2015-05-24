@@ -27,12 +27,19 @@ class UcCodemirrorXBlock(XBlock):
 
         fragment = Fragment()
         fragment.add_content(Util.load_resource("static/html/uc_codemirror.html"))
+        self.logger.info("load uc_codemirror.html")
         fragment.add_css(Util.load_resource("static/css/uc_codemirror.css"))
+        self.logger.info("load uc_codemirror.css")
         fragment.add_css(Util.load_resource("static/css/codemirror.css"))
+        self.logger.info("load codemirror.css")
 
         fragment.add_javascript(Util.load_resource("static/js/src/codemirror.js"))
+        self.logger.info("load codemirror.js")
+
         fragment.add_javascript(Util.load_resource("static/js/src/uc_codemirror.js"))
+        self.logger.info("load uc_codemirror.js")
         fragment.initialize_js('UcCodemirrorXBlock')
+        self.logger.info("initialize_js(UcCodemirrorXBlock)")
         return fragment
 
     # TO-DO: change this handler to perform your own actions.  You may need more
@@ -48,7 +55,7 @@ class UcCodemirrorXBlock(XBlock):
         return [
             ("UcCodemirrorXBlock",
              """<vertical_demo>
-                <uc_codemirror/>
+                
                 </vertical_demo>
              """),
         ]
