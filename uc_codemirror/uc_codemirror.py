@@ -28,7 +28,7 @@ class UcCodemirrorXBlock(XBlock):
         fragment = Fragment()
         fragment.add_content(Util.load_resource("static/html/uc_codemirror.html"))
         fragment.add_css(Util.load_resource("static/css/uc_codemirror.css"))
-        fragment.add_css(Util.load_resource("static/js/src/codemirror.css"))
+        fragment.add_css(Util.load_resource("static/css/codemirror.css"))
 
         fragment.add_javascript(Util.load_resource("static/js/src/codemirror.js"))
         fragment.add_javascript(Util.load_resource("static/js/src/uc_codemirror.js"))
